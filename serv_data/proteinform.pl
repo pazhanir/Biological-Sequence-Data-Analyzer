@@ -1,0 +1,63 @@
+#!"C:\xampp\perl\bin\perl.exe"
+use CGI qw(:standard);
+print header;
+$protein=param("protein");
+print "<br><b>Protein sequence:</b><br>$protein<br><br>";
+
+($length=length$protein);
+    print"<br>The length of protein is $length<br>";
+
+$a=($protein=~tr/Aa//);
+$c=($protein=~tr/Cc//);
+$d=($protein=~tr/Dd//);
+$e=($protein=~tr/Ee//);
+$f=($protein=~tr/Ff//);
+$g=($protein=~tr/Gg//);
+$h=($protein=~tr/Hh//);
+$i=($protein=~tr/Ii//);
+$k=($protein=~tr/Kk//);
+$l=($protein=~tr/Ll//);
+$m=($protein=~tr/Mm//);
+$n=($protein=~tr/Nn//);
+$p=($protein=~tr/Pp//);
+$q=($protein=~tr/Qq//);
+$r=($protein=~tr/Rr//);
+$s=($protein=~tr/Ss//);
+$t=($protein=~tr/Tt//);
+$v=($protein=~tr/Vv//);
+$w=($protein=~tr/Ww//);
+$y=($protein=~tr/Yy//);
+print "<br>Amino acid count:<br>A=$a";
+print "<br>C=$c";
+print "<br>D=$d";
+print "<br>E=$e";
+print "<br>F=$f";
+print "<br>G=$g";
+print "<br>H=$h";
+print "<br>I=$i";
+print "<br>K=$k";
+print "<br>L=$l";
+print "<br>M=$m";
+print "<br>N=$n";
+print "<br>P=$p";
+print "<br>Q=$q";
+print "<br>R=$r";
+print "<br>S=$s";
+print "<br>T=$t";
+print "<br>V=$v";
+print "<br>W=$w";
+print "<br>Y=$y";
+
+print"<br>Type of amino acid count<br><br>";
+$np=$a+$v+$l+$i+$k+$m+p;
+print"<br>Non-polar amino acid count: $np<br>";
+$pu=$s+$c+$t+$n+$q;
+print"<br>Polar amino acid count: $pu<br>";
+$aro=$f+$y+$w;
+print"<br>Aromatic amino acid count: $aro<br>";
+$pc=$l+$r+$h;
+print"<br>Positively charged amino acid count: $pc<br>";
+$nc=$d+$e;
+print"<br>Negatively charged amino acid count: $nc<br>";
+
+print"<br><br><a href=\"C:/xampp/htdocs/index.html\">Open Home(in New tab)</a>";
